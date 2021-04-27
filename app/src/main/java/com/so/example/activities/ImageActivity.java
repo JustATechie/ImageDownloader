@@ -113,7 +113,7 @@ public class ImageActivity extends AppCompatActivity {
                         /* save the image - I'm gonna use JPEG */
                         final Bitmap.CompressFormat mFormat = Bitmap.CompressFormat.JPEG;
                         /* don't forget to include the extension into the file name */
-                        final File myImageFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +
+                        final File myImageFile = new File(Environment.getDataDirectory().getAbsolutePath() +
                                 File.separator + "image_test" + File.separator + name + "." + mFormat.name().toLowerCase());
                         BasicImageDownloader.writeToDisk(myImageFile, result, new BasicImageDownloader.OnBitmapSaveListener() {
                             @Override
